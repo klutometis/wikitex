@@ -1,6 +1,6 @@
 .DA
 .TL
-WikiTeX 1.0.2 MANIFEST
+WikiTeX %VERSION% MANIFEST
 .AU
 Peter Danenberg <pcd at wikitex dot org>
 .NH

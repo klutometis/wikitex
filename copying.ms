@@ -1,6 +1,6 @@
 .DA
 .TL
-WikiTeX 1.0.2  LICENSE
+WikiTeX %VERSION% LICENSE
 .AU
 Peter Danenberg <pcd at wikitex dot org>
 .SH
