@@ -7,7 +7,7 @@
 
 
 
-                    WikiTeX 1.0 MANIFEST
+                   WikiTeX 1.0.2 MANIFEST
 
           Peter Danenberg <pcd at wikitex dot org>
 
@@ -61,7 +61,7 @@
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -140,7 +140,8 @@ WikiTeX: expansible LaTeX module for MediaWiki
 Copyright (C) 2004-5  Peter Danenberg
 
      WikiTeX  is  licensed  under  the Open Software License
-v. 2.1; to view a copy of this license, visit:
+v. 2.1; to view a copy  of  this  license,  see  COPYING  or
+visit:
 
      http://www.opensource.org/licenses/osl-2.1.php
 
@@ -192,7 +193,6 @@ v. 2.1; to view a copy of this license, visit:
 
 
 
-
-                       6 February 2005
+                        1 March 2005
 
 

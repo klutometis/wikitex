@@ -1,7 +1,7 @@
 .RP
 .DA
 .TL
-WikiTeX 1.0 README
+WikiTeX 1.0.2 README
 .AU
 Peter Danenberg <pcd at wikitex dot org>
 .AB
@@ -35,8 +35,10 @@ Covers installation and expansion of the WikiTeX system.
 	4.2. Extending WikiTeX
 .XA 5
 5. Help
+.XA 5
+6. Colophon
 .XA 6
-6. Copyright
+7. Copyright
 .XE
 .PX
 .NH 1
@@ -237,5 +239,13 @@ A great way to meet users and developers is by joining WikiTeX-l (see 4.1 above)
 http://archives.wikitex.org/wikitex-l
 .LP
 to browse the archives.
+.RE
+.NH 1
+Colophon
+.RS
+.PP
+This document was prepared in GNU troff using the ms macro package; preprocessed with tbl, the table formatter; and lastly filtered through col to remove reverse line feeds and tabs:
+.QP
+groff -ms -t -Tascii SOURCE | col -bx > OUT
 .RE
 .bp

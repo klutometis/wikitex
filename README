@@ -7,7 +7,7 @@
 
 
 
-                     WikiTeX 1.0 README
+                    WikiTeX 1.0.2 README
 
           Peter Danenberg <pcd at wikitex dot org>
 
@@ -20,7 +20,7 @@
 
 
 
-6 February 2005
+1 March 2005
 
 
 
@@ -73,7 +73,7 @@
 
 
 
-                     WikiTeX 1.0 README
+                    WikiTeX 1.0.2 README
 
           Peter Danenberg <pcd at wikitex dot org>
 
@@ -94,7 +94,8 @@
      4.1. Getting Started  . . . . . . . . . . . . . . .   4
      4.2. Extending WikiTeX  . . . . . . . . . . . . . .   4
 5. Help  . . . . . . . . . . . . . . . . . . . . . . . .   5
-6. Copyright . . . . . . . . . . . . . . . . . . . . . .   6
+6. Colophon  . . . . . . . . . . . . . . . . . . . . . .   5
+7. Copyright . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -120,14 +121,13 @@
 
 
 
-
 -----------
   * For  actual  development snapshots see Subver-
 sion below.
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -193,7 +193,7 @@ sion below.
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -259,7 +259,7 @@ sion below.
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -325,7 +325,7 @@ sion below.
 
 
 
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -344,6 +344,14 @@ sion below.
 
      to browse the archives.
 
+6.  Colophon
+
+          This document was prepared in GNU troff using  the
+     ms macro package; preprocessed with tbl, the table for-
+     matter; and  lastly  filtered  through  col  to  remove
+     reverse line feeds and tabs:
+
+          groff -ms -t -Tascii SOURCE | col -bx > OUT
 
 
 
@@ -383,15 +391,7 @@ sion below.
 
 
 
-
-
-
-
-
-
-
-
-                       6 February 2005
+                        1 March 2005
 
 
 
@@ -403,8 +403,9 @@ sion below.
 WikiTeX: expansible LaTeX module for MediaWiki
 Copyright (C) 2004-5  Peter Danenberg
 
-     WikiTeX is licensed under  the  Open  Software  License
-v. 2.1; to view a copy of this license, visit:
+     WikiTeX  is  licensed  under  the Open Software License
+v. 2.1; to view a copy  of  this  license,  see  COPYING  or
+visit:
 
      http://www.opensource.org/licenses/osl-2.1.php
 
@@ -456,7 +457,6 @@ v. 2.1; to view a copy of this license, visit:
 
 
 
-
-                       6 February 2005
+                        1 March 2005
 
 
