@@ -4,6 +4,12 @@ WikiTeX 1.0 NEWS
 .AU
 Peter Danenberg <pcd at wikitex dot org>
 .SH
+Sun Feb  6 14:21:48 PST 2005	Peter Danenberg
+.RS
+.PP
+We've disassociated our versioning from MediaWiki, and started with a pristine 1.0; so that, should we bundle in the future, our release cycles can be distinct.
+.RE
+.SH
 Sat Jan 29 00:34:09 PST 2005	Peter Danenberg
 .RS
 .PP
