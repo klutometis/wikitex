@@ -86,12 +86,10 @@ Subversion
 .RS
 .PP
 Use your Subversion client (http://subversion\:.tigris.org) to get the latest development snapshot:
-.RS
 .LD
-svn co http://svn.wikitex.org/trunk wikitex
+svn co http://svn.wikitex.org/wikitex/trunk wikitex
 .DE
-.RE
-or visit http://svn.wikitex.org to browse the codebase via web.
+or visit http://svn.wikitex.org/wikitex to browse the codebase via web.
 .RE
 .RE
 .NH 1

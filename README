@@ -156,10 +156,10 @@ sion below.
           .tigris.org)  to  get the latest development snap-
           shot:
 
-               svn co http://svn.wikitex.org/trunk wikitex
+          svn co http://svn.wikitex.org/wikitex/trunk wikitex
 
-          or  visit  http://svn.wikitex.org  to  browse  the
-          codebase via web.
+          or visit http://svn.wikitex.org/wikitex to  browse
+          the codebase via web.
 
 3.  Installation
 
