@@ -1,3 +1,9 @@
+2005-02-05  Peter Danenberg  <pcd at wikitex dot org>
+
+	* thanks.ms: added.
+
+	* readme.ms: updated installation process.
+
 2005-01-29  Peter Danenberg  <pcd at wikitex dot org>
 
 	* wikitex.sh: added support for gnuplot and graphviz;
