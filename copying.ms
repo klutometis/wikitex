@@ -1,5 +1,5 @@
 .DA
 .TL
-WikiTeX 1.4beta5  LICENSE
+WikiTeX 1.0  LICENSE
 .AU
-Peter Danenberg <danenberg at mitdasein dot com>
+Peter Danenberg <pcd at wikitex dot org>

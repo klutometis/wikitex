@@ -7,9 +7,9 @@
 
 
 
-                   WikiTeX 1.4beta5 NEWS
+                      WikiTeX 1.0 NEWS
 
-      Peter Danenberg <danenberg at mitdasein dot com>
+          Peter Danenberg <pcd at wikitex dot org>
 
 
 Sat Jan 29 00:34:09 PST 2005  Peter Danenberg
@@ -61,7 +61,7 @@ Sun Oct  3 17:38:03 PDT 2004  Peter Danenberg
 
 
 
-                       29 January 2005
+                       5 February 2005
 
 
 
@@ -127,7 +127,7 @@ gramming (faqs.org/docs/artu).
 
 
 
-                       29 January 2005
+                       5 February 2005
 
 
 
@@ -137,15 +137,13 @@ gramming (faqs.org/docs/artu).
 
 
 WikiTeX: expansible LaTeX module for MediaWiki
-Copyright (C) 2004  Peter Danenberg
+Copyright (C) 2004-5  Peter Danenberg
 
-     WikiTeX  is  free  software;  you  can  redistribute it
-and/or modify it under the terms of the GNU  General  Public
-License as published by the Free Software Foundation; either
-version 2 of the License, or (at your option) any later ver-
-sion.
-
-
+     WikiTeX is licensed under the Creative Commons Attribu-
+tion  License.  To  view  a  copy  of  this  license,  visit
+http://creativecommons.org/licenses/by/2.0/ or send a letter
+to  Creative Commons, 559 Nathan Abbott Way, Stanford, Cali-
+fornia 94305, USA.
 
 
 
@@ -193,6 +191,8 @@ sion.
 
 
 
-                       29 January 2005
+
+
+                       5 February 2005
 
 

@@ -7,18 +7,24 @@
 
 
 
-                 WikiTeX 1.4beta5 MANIFEST
+                    WikiTeX 1.0 MANIFEST
 
-      Peter Danenberg <danenberg at mitdasein dot com>
+          Peter Danenberg <pcd at wikitex dot org>
 
 
 1.  Documents
 
-     ChangeLog   Subdural mutations
-     COPYING     License
-     MANIFEST    Serial list
-     NEWS        Visible changes and todo's
-     README      Installation and expansion
+     ChangeLog        Subdural mutations
+     COPYING          License
+     copying.ms       COPYING source
+     copying.inc.ms   Include license
+     Makefile         Compile docs from source
+     MANIFEST         Serial list
+     manifest.ms      MAINFEST source
+     NEWS             Visible changes and todo's
+     news.ms          NEWS source
+     README           Installation and expansion
+     readme.ms        README source
 
 
 2.  Module
@@ -55,13 +61,7 @@
 
 
 
-
-
-
-
-
-
-                       29 January 2005
+                       5 February 2005
 
 
 
@@ -71,15 +71,13 @@
 
 
 WikiTeX: expansible LaTeX module for MediaWiki
-Copyright (C) 2004  Peter Danenberg
+Copyright (C) 2004-5  Peter Danenberg
 
-     WikiTeX  is  free  software;  you  can  redistribute it
-and/or modify it under the terms of the GNU  General  Public
-License as published by the Free Software Foundation; either
-version 2 of the License, or (at your option) any later ver-
-sion.
-
-
+     WikiTeX is licensed under the Creative Commons Attribu-
+tion  License.  To  view  a  copy  of  this  license,  visit
+http://creativecommons.org/licenses/by/2.0/ or send a letter
+to Creative Commons, 559 Nathan Abbott Way, Stanford,  Cali-
+fornia 94305, USA.
 
 
 
@@ -127,6 +125,8 @@ sion.
 
 
 
-                       29 January 2005
+
+
+                       5 February 2005
 
 

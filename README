@@ -7,9 +7,9 @@
 
 
 
-                  WikiTeX 1.4beta5 README
+                     WikiTeX 1.0 README
 
-      Peter Danenberg <danenberg at mitdasein dot com>
+          Peter Danenberg <pcd at wikitex dot org>
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-29 January 2005
+5 February 2005
 
 
 
@@ -73,61 +73,61 @@
 
 
 
-                  WikiTeX 1.4beta5 README
+                     WikiTeX 1.0 README
 
-      Peter Danenberg <danenberg at mitdasein dot com>
+          Peter Danenberg <pcd at wikitex dot org>
 
                      Table of Contents
 
 
 1. Introduction  . . . . . . . . . . . . . . . . . . . .   1
 2. Acquisition . . . . . . . . . . . . . . . . . . . . .   1
-3. Installation  . . . . . . . . . . . . . . . . . . . .   1
+     2.1 CVS . . . . . . . . . . . . . . . . . . . . . .   1
+     2.2 FTP . . . . . . . . . . . . . . . . . . . . . .   2
+     2.3 HTTP  . . . . . . . . . . . . . . . . . . . . .   2
+     2.4 Subversion  . . . . . . . . . . . . . . . . . .   2
+3. Installation  . . . . . . . . . . . . . . . . . . . .   2
      3.1. Stand-alone distribution . . . . . . . . . . .   2
      3.2. Pre-packaged distribution  . . . . . . . . . .   2
      3.2.1. Java SVG (Batik) . . . . . . . . . . . . . .   3
-4. Expansion . . . . . . . . . . . . . . . . . . . . . .   3
-5. Copyright . . . . . . . . . . . . . . . . . . . . . .   4
+4. Expansion . . . . . . . . . . . . . . . . . . . . . .   4
+5. Copyright . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
           WikiTeX extends MediaWiki by allowing  authors  to
      manipulate  graphical  objects  directly in their arti-
      cles; support so  far  includes:  math,  music,  chess,
-     chemistry,  go,  plots and relational diagrams.  To see
-     WikiTeX in action, please visit:
+     chemistry, go, plots and relational diagrams.  To learn
+     more about WikiTeX, please visit:
 
-          http://wikisophia.org
+          http://wikitex.org
+
+     or http://wikisophia.org to see it in action.
 
 2.  Acquisition
 
-          Unadorned WikiTeX is available via  anonymous  CVS
-     from SourceForge:
+          WikiTeX is available in  two  formats:  standalone
+     and  integral; use standalone to integrate WikiTeX with
+     a pre-existing MediaWiki installation, or integral  for
+     pre-packaged WikiTeX.
+
+     2.1.  CVS
+
+               Stand-alone  WikiTeX from MediaWiki's Source-
+          Forge CVS:*
 
      cvs -d:pserver:anonymous@cvs.sf.net:/cvsroot/wikipedia \
      co wikitex
 
-     Alternatively, WikiTeX comes  prepackaged  with  Media-
-     Wiki; see:
 
-          http://wikitex.org
-
-3.  Installation
-
-          Depending  on  your distribution, installation may
-     consist of three or more steps; and assumes some famil-
-     iarity with Apache.
-
-          Each  method below presupposes a succesful instal-
-     lation of MediaWiki.
+-----------
+  * Actual development versions are available  via
+Subversion below.
 
 
 
-
-
-
-
-                       29 January 2005
+                       5 February 2005
 
 
 
@@ -136,34 +136,83 @@
                              -2-
 
 
+     2.2.  FTP
+
+               Stand-alone  and integral versions are avail-
+          able from:
+
+               ftp://wikitex.org
+
+     2.3.  HTTP
+
+               Stand-alone and integral versions are  avail-
+          able from:
+
+               http://wikitex.org/wikitex
+
+     2.4.  Subversion
+
+               Get the latest development version of WikiTeX
+          with your  Subversion  client  (http://subversion.
+          tigris.org):
+
+               svn co http://svn.wikitex.org/trunk wikitex
+
+          or  visit  http://svn.wikitex.org  to  browse  the
+          codebase via web.
+
+3.  Installation
+
+          Depending on your distribution,  installation  may
+     consist of three or more steps; and assumes some famil-
+     iarity with httpd.
+
+          Each  presupposes  a  succesful  installation   of
+     MediaWiki.
+
      3.1.  Stand-alone distribution
 
-               In addition to the steps  detailed  for  pre-
-          packaged distributions, perform these twain:
+               In addition to the pre-packaged distribution,
+          perform these steps twain:
 
-          1.   Create   the  directory  /extensions/wikitex;
-               copy there the distribution files; create the
-               directory /extensions/wikitex/tmp.
+          1.   From the base installation directory,  create
+               /extensions/wikitex; copy there the distribu-
+               tion.
 
-          2.   Add  the following line to /LocalSettings.php
-               lastly before the terminal '?>':
+          2.   Add the following line to  /LocalSettings.php
+               before the terminal '?>':
 
                include './extensions/wikitex/wikitex.php';
 
-               You  may  now  continue with normal installa-
+               You may now continue  with  normal  installa-
           tion.
+
+
+
+
+
+
+
+                       5 February 2005
+
+
+
+
+
+                             -3-
+
 
      3.2.  Pre-packaged distribution
 
-          1.   Render /extensions/wikitex/tmp  scribable  to
+          1.   Render  /extensions/wikitex/tmp  scribable to
                the web server, but beware to disable script-
                ing.
 
-          2.   Verify that ImageMagick (imagemagick.org)  is
-               present,   and   acquire  Jan-Aoke  Larsson's
+          2.   Verify  that ImageMagick (imagemagick.org) is
+               present,  and  acquire   Jan-Aoke   Larsson's
                dvipng:
 
-          http://sourceforge.net/projects/dvipng/
+                    http://sourceforge.net/projects/dvipng/
 
           3.   Install as many of the following packages  as
                you  would  like  to support, or add your own
@@ -180,26 +229,13 @@
      greek Ibycus      Pierre MacKay        tug.org
      ling  AVM         Christopher Manning  stanford.edu
            Parsetree   Eirik Hektoen        essex.ac.uk
-     math  AMS-LaTeX   Amer. Math. Soc.     ams.org
+     math* AMS-LaTeX   Amer. Math. Soc.     ams.org
      music Lilypond    Han-Wen Nienhuys     lilypond.org
      plot  Gnuplot     Nikos Drakos         gnuplot.info
      svg   SVG lite    ImageMagick          imagemagick.org
      teng  Tengwar     Ivan Derzhanski      quettar.org
      tipa  TIPA        Rei Fukui            ctan.org
      xym   XyMTeX      Shinsaku Fujita      kit.ac.jp
-
-
-
-
-
-
-                       29 January 2005
-
-
-
-
-
-                             -3-
 
 
           4.   Lastly, ensure that your server's $PATH vari-
@@ -216,6 +252,21 @@
                2.   Install Batik (xml.apache.org/batik); if
                     elsewhere than /usr/local/batik, config-
                     ure wikitex.inc.sh.
+-----------
+  * Nota bene: <amsmath> replaces <math> in stand-
+alone  distributions  to  avoid  conflicting  with
+texvc, MediaWiki's built-in math renderer.
+
+
+
+                       5 February 2005
+
+
+
+
+
+                             -4-
+
 
                3.   If  you  have XWindows, the Xserver Vir-
                     tual Frame Buffer  should  be  included;
@@ -235,97 +286,46 @@
                          DISPLAY=localhost:1.0
                          export DISPLAY
 
-     4.  Expanding WikiTeX
+4.  Expanding WikiTeX
 
-               Adding  novel  packages  to  WikiTeX  can  be
-          achieved in several discrete steps; after you have
-          downloaded and installed the package:
+          Adding  novel  packages to WikiTeX can be achieved
+     in several discrete steps; after  you  have  downloaded
+     and installed the package:
 
-               1.   Devise a class name for the package, and
-                    add a template to /extensions/wikitex in
-                    this form:
+          1.   Devise  a class name for the package, and add
+               a template  to  /extensions/wikitex  in  this
+               form:
 
-                         wikitex.<classname>.inc.<ext>
+                    wikitex.<classname>.inc.<ext>
 
-                    The  template should expose said package
-                    to the renderer; see  the  current  tem-
-                    plates for examples.
+               The  template  should  expose said package to
+               the renderer; see the current  templates  for
+               examples.
 
-               2.   Unless  the  class requires non-standard
-                    processing  (confer  Lilypond's   midi),
-                    skip  to  step  three;  else,  add a new
-                    function in wikitex.sh under <class>.
+          2.   Unless  the  class requires non-standard pro-
+               cessing (confer  Lilypond's  midi),  skip  to
+               step three; else, add a new function in wiki-
+               tex.sh under <class>.
 
+               Consult wikitex.sh for examples.
 
+          3.   Lastly, if the package  contains  undesirable
+               or insecure directives, add them to:
 
+                    objRend::strPost()::arrBlack[<class>]
 
-                       29 January 2005
+               in wikitex.php; the which see for details.
 
 
 
 
 
-                             -4-
 
 
-                    Consult wikitex.sh for examples.
 
-               3.   Lastly, if the package contains undesir-
-                    able  or  insecure  directives, add them
-                    to:
 
-                         objRend::strPost()::arrBlack[<class>]
 
-                    in   wikitex.php;   the  which  see  for
-                    details.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                       29 January 2005
+                       5 February 2005
 
 
 
@@ -334,16 +334,14 @@
                              -5-
 
 
-     WikiTeX: expansible LaTeX module for MediaWiki
-     Copyright (C) 2004  Peter Danenberg
+WikiTeX: expansible LaTeX module for MediaWiki
+Copyright (C) 2004-5  Peter Danenberg
 
-          WikiTeX  is  free   software;   you   can   redis-
-     tribute  it and/or modify it under the terms of the GNU
-     General  Public License as published by the Free  Soft-
-     ware  Foundation;  either  version 2 of the License, or
-     (at your option) any later ver- sion.
-
-
+     WikiTeX is licensed under the Creative Commons Attribu-
+tion  License.  To  view  a  copy  of  this  license,  visit
+http://creativecommons.org/licenses/by/2.0/ or send a letter
+to  Creative Commons, 559 Nathan Abbott Way, Stanford, Cali-
+fornia 94305, USA.
 
 
 
@@ -391,6 +389,8 @@
 
 
 
-                       29 January 2005
+
+
+                       5 February 2005
 
 

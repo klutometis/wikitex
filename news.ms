@@ -1,8 +1,8 @@
 .DA
 .TL
-WikiTeX 1.4beta5 NEWS
+WikiTeX 1.0 NEWS
 .AU
-Peter Danenberg <danenberg at mitdasein dot com>
+Peter Danenberg <pcd at wikitex dot org>
 .SH
 Sat Jan 29 00:34:09 PST 2005	Peter Danenberg
 .RS

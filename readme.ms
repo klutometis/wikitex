@@ -1,9 +1,9 @@
 .RP
 .DA
 .TL
-WikiTeX 1.4beta5 README
+WikiTeX 1.0 README
 .AU
-Peter Danenberg <danenberg at mitdasein dot com>
+Peter Danenberg <pcd at wikitex dot org>
 .AB
 Covers installation and expansion of the WikiTeX system.
 .AE
@@ -12,6 +12,14 @@ Covers installation and expansion of the WikiTeX system.
 .XA 1
 2. Acquisition
 .XA 1
+	2.1 CVS
+.XA 2
+	2.2 FTP
+.XA 2
+	2.3 HTTP
+.XA 2
+	2.4 Subversion
+.XA 2
 3. Installation
 .XA 2
 	3.1. Stand-alone distribution
@@ -19,50 +27,86 @@ Covers installation and expansion of the WikiTeX system.
 	3.2. Pre-packaged distribution
 .XA 3
 	3.2.1. Java SVG (Batik)
-.XA 3
-4. Expansion
 .XA 4
+4. Expansion
+.XA 5
 5. Copyright
 .XE
 .PX
-.NH
+.NH 1
 Introduction
 .RS
 .PP
-WikiTeX extends MediaWiki by allowing authors to manipulate graphical objects directly in their articles; support so far includes: math, music, chess, chemistry, go, plots and relational diagrams.  To see WikiTeX in action, please visit:
+WikiTeX extends MediaWiki by allowing authors to manipulate graphical objects directly in their articles; support so far includes: math, music, chess, chemistry, go, plots and relational diagrams.  To learn more about WikiTeX, please visit:
 .QP
-http://wikisophia.org
+http://wikitex.org
+.LP
+or http://wikisophia.org to see it in action.
 .RE
-.NH
+.NH 1
 Acquisition
 .RS
 .PP
-Unadorned WikiTeX is available via anonymous CVS from SourceForge:
-.LP
-cvs\ \%-d:pserver:anonymous@cvs.sf.net:/cvsroot/wikipedia\ \\
+WikiTeX is available in two formats: standalone and integral; use standalone to integrate WikiTeX with a pre-existing MediaWiki installation, or integral for pre-packaged WikiTeX.
+.NH 2
+CVS
+.RS
+.PP
+Stand-alone WikiTeX from MediaWiki's SourceForge CVS:*
+.FS *
+Actual development versions are available via Subversion below.
+.FE
+.RE
+.LD
+\%cvs -d:pserver:anonymous@cvs.sf.net:/cvsroot/wikipedia \\
 co wikitex
-.LP
-Alternatively, WikiTeX comes prepackaged with Media\%Wiki; see:
+.DE
+.NH 2
+FTP
+.RS
+.PP
+Stand-alone and integral versions are available from:
 .QP
-http://wikitex.org
+ftp://wikitex.org
+.RE
+.NH 2
+HTTP
+.RS
+.PP
+Stand-alone and integral versions are available from:
+.QP
+http://wikitex.org/wikitex
+.RE
+.NH 2
+Subversion
+.RS
+.PP
+Get the latest development version of WikiTeX with your Subversion client (http://subversion.\:tigris.org):
+.RS
+.LD
+svn co http://svn.wikitex.org/trunk wikitex
+.DE
+.RE
+or visit http://svn.wikitex.org to browse the codebase via web.
+.RE
 .RE
 .NH 1
 Installation
 .RS
 .PP
-Depending on your distribution, installation may consist of three or more steps; and assumes some familiarity with Apache.
+Depending on your distribution, installation may consist of three or more steps; and assumes some familiarity with httpd.
 .PP
-Each method below presupposes a succesful installation of MediaWiki.
+Each presupposes a succesful installation of Media\%Wiki.
 .NH 2
 Stand-alone distribution
 .RS
 .PP
-In addition to the steps detailed for pre-packaged distributions, perform these twain:
+In addition to the pre-packaged distribution, perform these steps twain:
 .nr i 0 1
 .IP \n+i.
-Create the directory /extensions/wikitex; copy there the distribution files; create the directory /extensions/wikitex/tmp.
+From the base installation directory, create /extensions/wikitex; copy there the distribution.
 .IP \n+i.
-Add the following line to /LocalSettings.php lastly before the terminal '?>':
+Add the following line to /LocalSettings.php before the terminal '?>':
 .QP
 include\ \%'./extensions/wikitex/wikitex.php';
 .PP
@@ -74,12 +118,12 @@ Pre-packaged distribution
 .nr i 0 1
 .IP \n+i.
 Render /extensions/wikitex/tmp scribable to the web server, but beware to disable scripting.
-.KS
 .IP \n+i.
 Verify that ImageMagick (imagemagick.org) is present, and acquire Jan-Aoke Larsson's dvipng:
-.LP
+.RS
+.QP
 \%http://sourceforge.net/projects/dvipng/
-.KE
+.RE
 .IP \n+i.
 Install as many of the following packages as you would like to support, or add your own (see Expanding WikiTeX):
 .RE
@@ -99,7 +143,7 @@ graph	Graphviz	Emden Gansner	research.att.com
 greek	Ibycus	Pierre MacKay	tug.org
 ling	AVM	Christopher Manning	stanford.edu
 	Parsetree	Eirik Hektoen	essex.ac.uk
-math	AMS-LaTeX	Amer. Math. Soc.	ams.org
+math*	AMS-LaTeX	Amer. Math. Soc.	ams.org
 music	Lilypond	Han-Wen Nienhuys	lilypond.org
 plot	Gnuplot	Nikos Drakos	gnuplot.info
 svg	SVG lite	ImageMagick	imagemagick.org
@@ -108,6 +152,9 @@ tipa	TIPA	Rei Fukui	ctan.org
 xym	XyMTeX	Shinsaku Fujita	kit.ac.jp
 .TE
 .KE
+.FS *
+Nota bene: <amsmath> replaces <math> in stand-alone distributions to avoid conflicting with texvc, MediaWiki's built-in math renderer.
+.FE
 .RS
 .IP \n+i.
 Lastly, ensure that your server's $PATH variable includes /usr/bin and /usr/local/bin, or wherever your binaries are installed.
@@ -140,6 +187,7 @@ Add the following to apachectl or equivalent:
 \%DISPLAY=localhost:1.0
 .br
 \%export DISPLAY
+.RE
 .RE
 .RE
 .RE

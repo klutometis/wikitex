@@ -1,8 +1,8 @@
 .DA
 .TL
-WikiTeX 1.4beta5 MANIFEST
+WikiTeX 1.0 MANIFEST
 .AU
-Peter Danenberg <danenberg at mitdasein dot com>
+Peter Danenberg <pcd at wikitex dot org>
 .NH
 Documents
 .RS
@@ -10,9 +10,15 @@ Documents
 l l .
 ChangeLog	Subdural mutations
 COPYING	License
+copying.ms	COPYING source
+copying.inc.ms	Include license
+Makefile	Compile docs from source
 MANIFEST	Serial list
+manifest.ms	MAINFEST source
 NEWS	Visible changes and todo's
+news.ms	NEWS source
 README	Installation and expansion
+readme.ms	README source
 .TE
 .RE
 .NH
