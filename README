@@ -20,7 +20,7 @@
 
 
 
-5 February 2005
+6 February 2005
 
 
 
@@ -87,11 +87,14 @@
      2.3 HTTP  . . . . . . . . . . . . . . . . . . . . .   2
      2.4 Subversion  . . . . . . . . . . . . . . . . . .   2
 3. Installation  . . . . . . . . . . . . . . . . . . . .   2
-     3.1. Stand-alone distribution . . . . . . . . . . .   2
-     3.2. Pre-packaged distribution  . . . . . . . . . .   2
+     3.1. Prerequisites  . . . . . . . . . . . . . . . .   2
+     3.2. Proceeding . . . . . . . . . . . . . . . . . .   2
      3.2.1. Java SVG (Batik) . . . . . . . . . . . . . .   3
-4. Expansion . . . . . . . . . . . . . . . . . . . . . .   4
-5. Copyright . . . . . . . . . . . . . . . . . . . . . .   5
+4. Hacking . . . . . . . . . . . . . . . . . . . . . . .   4
+     4.1. Getting Started  . . . . . . . . . . . . . . .   4
+     4.2. Extending WikiTeX  . . . . . . . . . . . . . .   4
+5. Help  . . . . . . . . . . . . . . . . . . . . . . . .   5
+6. Copyright . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -107,27 +110,24 @@
 
 2.  Acquisition
 
-          WikiTeX is available in  two  formats:  standalone
-     and  integral; use standalone to integrate WikiTeX with
-     a pre-existing MediaWiki installation, or integral  for
-     pre-packaged WikiTeX.
-
      2.1.  CVS
 
-               Stand-alone  WikiTeX from MediaWiki's Source-
-          Forge CVS:*
+               WikiTeX can be CVS'ed from MediaWiki's facil-
+          ity at SourceForge:*
 
      cvs -d:pserver:anonymous@cvs.sf.net:/cvsroot/wikipedia \
      co wikitex
 
 
+
+
 -----------
-  * Actual development versions are available  via
-Subversion below.
+  * For  actual  development snapshots see Subver-
+sion below.
 
 
 
-                       5 February 2005
+                       6 February 2005
 
 
 
@@ -138,23 +138,23 @@ Subversion below.
 
      2.2.  FTP
 
-               Stand-alone  and integral versions are avail-
-          able from:
+               The latest stable releases can be  downloaded
+          from:
 
                ftp://wikitex.org
 
      2.3.  HTTP
 
-               Stand-alone and integral versions are  avail-
-          able from:
+               The  latest releases can be browsed and down-
+          loaded from:
 
                http://wikitex.org/wikitex
 
      2.4.  Subversion
 
-               Get the latest development version of WikiTeX
-          with your  Subversion  client  (http://subversion.
-          tigris.org):
+               Use your Subversion client (http://subversion
+          .tigris.org)  to  get the latest development snap-
+          shot:
 
                svn co http://svn.wikitex.org/trunk wikitex
 
@@ -163,37 +163,37 @@ Subversion below.
 
 3.  Installation
 
-          Depending on your distribution,  installation  may
-     consist of three or more steps; and assumes some famil-
-     iarity with httpd.
+     3.1.  Prerequisites
 
-          Each  presupposes  a  succesful  installation   of
-     MediaWiki.
+               WikiTeX's   installation  requires  at  least
+          MediaWiki (wikipedia.sourceforge.net)  and  LaTeX,
+          which  comes  preinstalled in many Linux distribu-
+          tions.  Depending on which classes you'd  like  to
+          support,  additional packages may be required (see
+          below).
 
-     3.1.  Stand-alone distribution
+               We'll eventually  call  for  ImageMagick  and
+          dvipng, whose former is also pretty standard fare.
 
-               In addition to the pre-packaged distribution,
-          perform these steps twain:
+     3.2.  Process
 
-          1.   From the base installation directory,  create
-               /extensions/wikitex; copy there the distribu-
-               tion.
+               Working from  MediaWiki's  base  installation
+          directory, perform the following:
+
+          1.   Create /extensions/wikitex and copy there the
+               distribution.
 
           2.   Add the following line to  /LocalSettings.php
                before the terminal '?>':
 
                include './extensions/wikitex/wikitex.php';
 
-               You may now continue  with  normal  installa-
-          tion.
+          3.   Render /extensions/wikitex/tmp  scribable  to
+               the   web   server,  but  beware  to  disable
 
 
 
-
-
-
-
-                       5 February 2005
+                       6 February 2005
 
 
 
@@ -202,43 +202,39 @@ Subversion below.
                              -3-
 
 
-     3.2.  Pre-packaged distribution
+               scripting.
 
-          1.   Render  /extensions/wikitex/tmp  scribable to
-               the web server, but beware to disable script-
-               ing.
-
-          2.   Verify  that ImageMagick (imagemagick.org) is
-               present,  and  acquire   Jan-Aoke   Larsson's
+          4.   Verify that ImageMagick (imagemagick.org)  is
+               present,   and   acquire  Jan-Aoke  Larsson's
                dvipng:
 
                     http://sourceforge.net/projects/dvipng/
 
-          3.   Install as many of the following packages  as
-               you  would  like  to support, or add your own
+          5.   Install  as many of the following packages as
+               you would like to support, or  add  your  own
                (see Expanding WikiTeX):
 
-     Class   Package         Author               URL
+      Class    Package        Author              URL
      --------------------------------------------------------
-     batik SVG Java    Apache               apache.org
-     chem  PPCH-TeX    Hans Hagen           pragma-ade.com
-     chess LaTeX Chess Piet Tutelaers       tug.org
-     feyn  Feynman     Michael Levine       ctan.org
-     go    Go          Daniel Bump          stanford.edu
-     graph Graphviz    Emden Gansner        research.att.com
-     greek Ibycus      Pierre MacKay        tug.org
-     ling  AVM         Christopher Manning  stanford.edu
-           Parsetree   Eirik Hektoen        essex.ac.uk
-     math* AMS-LaTeX   Amer. Math. Soc.     ams.org
-     music Lilypond    Han-Wen Nienhuys     lilypond.org
-     plot  Gnuplot     Nikos Drakos         gnuplot.info
-     svg   SVG lite    ImageMagick          imagemagick.org
-     teng  Tengwar     Ivan Derzhanski      quettar.org
-     tipa  TIPA        Rei Fukui            ctan.org
-     xym   XyMTeX      Shinsaku Fujita      kit.ac.jp
+     batik   SVG Java   Apache              apache.org
+     chem    PPCH-TeX   Hans Hagen          pragma-ade.com
+     chess   LaTeX ChessPiet Tutelaers      tug.org
+     feyn    Feynman    Michael Levine      ctan.org
+     go      Go         Daniel Bump         stanford.edu
+     graph   Graphviz   Emden Gansner       research.att.com
+     greek   Ibycus     Pierre MacKay       tug.org
+     ling    AVM        Christopher Manning stanford.edu
+             Parsetree  Eirik Hektoen       essex.ac.uk
+     amsmath AMS-LaTeX  Amer. Math. Soc.    ams.org
+     music   Lilypond   Han-Wen Nienhuys    lilypond.org
+     plot    Gnuplot    Nikos Drakos        gnuplot.info
+     svg     SVG lite   ImageMagick         imagemagick.org
+     teng    Tengwar    Ivan Derzhanski     quettar.org
+     tipa    TIPA       Rei Fukui           ctan.org
+     xym     XyMTeX     Shinsaku Fujita     kit.ac.jp
 
 
-          4.   Lastly, ensure that your server's $PATH vari-
+          6.   Lastly, ensure that your server's $PATH vari-
                able includes /usr/bin and /usr/local/bin, or
                wherever your binaries are installed.
 
@@ -252,14 +248,18 @@ Subversion below.
                2.   Install Batik (xml.apache.org/batik); if
                     elsewhere than /usr/local/batik, config-
                     ure wikitex.inc.sh.
------------
-  * Nota bene: <amsmath> replaces <math> in stand-
-alone  distributions  to  avoid  conflicting  with
-texvc, MediaWiki's built-in math renderer.
+
+               3.   If you have XWindows, the  Xserver  Vir-
+                    tual  Frame  Buffer  should be included;
+                    configure Xvfb to start  up  at  runtime
+                    by:
+
+                    a.   Copying the provided xvfb script to
+                         /etc/init.d
 
 
 
-                       5 February 2005
+                       6 February 2005
 
 
 
@@ -267,14 +267,6 @@ texvc, MediaWiki's built-in math renderer.
 
                              -4-
 
-
-               3.   If  you  have XWindows, the Xserver Vir-
-                    tual Frame Buffer  should  be  included;
-                    configure  Xvfb  to  start up at runtime
-                    by:
-
-                    a.   Copying the provided xvfb script to
-                         /etc/init.d
 
                     b.   Linking xvfb at the prompt:
 
@@ -286,11 +278,24 @@ texvc, MediaWiki's built-in math renderer.
                          DISPLAY=localhost:1.0
                          export DISPLAY
 
-4.  Expanding WikiTeX
+4.  Hacking WikiTeX
 
-          Adding  novel  packages to WikiTeX can be achieved
-     in several discrete steps; after  you  have  downloaded
-     and installed the package:
+     4.1.  Getting Started
+
+               Join the WikiTeX-l mailing  list,  where  you
+          can communicate with other users and developers:
+
+               http://lists.wikitex.org/wikitex-l
+
+          and    familiarize    yourself   with   Subversion
+          (http://subversion.tigris.org), our  collaborative
+          development tool.
+
+     4.2.  Extending WikiTeX
+
+               Adding  novel  packages  to  WikiTeX  can  be
+          achieved in several discrete steps; after you have
+          downloaded and installed the package:
 
           1.   Devise  a class name for the package, and add
                a template  to  /extensions/wikitex  in  this
@@ -320,18 +325,79 @@ texvc, MediaWiki's built-in math renderer.
 
 
 
-
-
-
-
-
-                       5 February 2005
+                       6 February 2005
 
 
 
 
 
                              -5-
+
+
+5.  Getting Help
+
+          A great way to meet users  and  developers  is  by
+     joining   WikiTeX-l  (see  4.1  above);  alternatively,
+     visit:
+
+          http://archives.wikitex.org/wikitex-l
+
+     to browse the archives.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       6 February 2005
+
+
+
+
+
+                             -6-
 
 
 WikiTeX: expansible LaTeX module for MediaWiki
@@ -391,6 +457,6 @@ fornia 94305, USA.
 
 
 
-                       5 February 2005
+                       6 February 2005
 
 

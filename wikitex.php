@@ -2,7 +2,7 @@
 
 /*
 WikiTeX: expansible LaTeX module for MediaWiki
-Copyright (C) 2004  Peter Danenberg
+Copyright (C) 2004-5  Peter Danenberg
 
      WikiTeX  is  free  software;  you  can  redistribute it
 and/or modify it under the terms of the GNU  General  Public

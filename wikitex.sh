@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # WikiTeX: expansible LaTeX module for MediaWiki
-# Copyright (C) 2004  Peter Danenberg
+# Copyright (C) 2004-5  Peter Danenberg
 # 
-#      WikiTeX  is  free  software;  you  can  redistribute it
-# and/or modify it under the terms of the GNU  General  Public
-# License as published by the Free Software Foundation; either
-# version 2 of the License, or (at your option) any later ver-
-# sion.
+#      WikiTeX is licensed under the Creative Commons Attribu-
+# tion  License.  To  view  a  copy  of  this  license,  visit
+# http://creativecommons.org/licenses/by/2.0/ or send a letter
+# to Creative Commons, 559 Nathan Abbott Way, Stanford,  Cali-
+# fornia 94305, USA.
 # 
 # wikitex.sh: shell interface to wikitex.php
 # Usage: FILE MODULE OUTPATH

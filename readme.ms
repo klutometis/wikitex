@@ -22,15 +22,21 @@ Covers installation and expansion of the WikiTeX system.
 .XA 2
 3. Installation
 .XA 2
-	3.1. Stand-alone distribution
+	3.1. Prerequisites
 .XA 2
-	3.2. Pre-packaged distribution
+	3.2. Proceeding
 .XA 3
 	3.2.1. Java SVG (Batik)
 .XA 4
-4. Expansion
+4. Hacking
+.XA 4
+	4.1. Getting Started
+.XA 4
+	4.2. Extending WikiTeX
 .XA 5
-5. Copyright
+5. Help
+.XA 6
+6. Copyright
 .XE
 .PX
 .NH 1
@@ -46,26 +52,24 @@ or http://wikisophia.org to see it in action.
 .NH 1
 Acquisition
 .RS
-.PP
-WikiTeX is available in two formats: standalone and integral; use standalone to integrate WikiTeX with a pre-existing MediaWiki installation, or integral for pre-packaged WikiTeX.
 .NH 2
 CVS
 .RS
 .PP
-Stand-alone WikiTeX from MediaWiki's SourceForge CVS:*
-.FS *
-Actual development versions are available via Subversion below.
-.FE
+WikiTeX can be CVS'ed from MediaWiki's facility at SourceForge:*
 .RE
 .LD
 \%cvs -d:pserver:anonymous@cvs.sf.net:/cvsroot/wikipedia \\
 co wikitex
 .DE
+.FS *
+For actual development snapshots see Subversion below.
+.FE
 .NH 2
 FTP
 .RS
 .PP
-Stand-alone and integral versions are available from:
+The latest stable releases can be downloaded from:
 .QP
 ftp://wikitex.org
 .RE
@@ -73,7 +77,7 @@ ftp://wikitex.org
 HTTP
 .RS
 .PP
-Stand-alone and integral versions are available from:
+The latest releases can be browsed and downloaded from:
 .QP
 http://wikitex.org/wikitex
 .RE
@@ -81,7 +85,7 @@ http://wikitex.org/wikitex
 Subversion
 .RS
 .PP
-Get the latest development version of WikiTeX with your Subversion client (http://subversion.\:tigris.org):
+Use your Subversion client (http://subversion\:.tigris.org) to get the latest development snapshot:
 .RS
 .LD
 svn co http://svn.wikitex.org/trunk wikitex
@@ -93,29 +97,26 @@ or visit http://svn.wikitex.org to browse the codebase via web.
 .NH 1
 Installation
 .RS
-.PP
-Depending on your distribution, installation may consist of three or more steps; and assumes some familiarity with httpd.
-.PP
-Each presupposes a succesful installation of Media\%Wiki.
 .NH 2
-Stand-alone distribution
+Prerequisites
 .RS
 .PP
-In addition to the pre-packaged distribution, perform these steps twain:
+WikiTeX's installation requires at least Media\%Wiki (wikipedia.sourceforge.net) and LaTeX, which comes preinstalled in many Linux distributions.  Depending on which classes you'd like to support, additional packages may be required (see below).
+.PP
+We'll eventually call for ImageMagick and dvipng, whose former is also pretty standard fare.
+.RE
+.NH 2
+Process
+.RS
+.PP
+Working from MediaWiki's base installation directory, perform the following:
 .nr i 0 1
 .IP \n+i.
-From the base installation directory, create /extensions/wikitex; copy there the distribution.
+Create /extensions/wikitex and copy there the distribution.
 .IP \n+i.
 Add the following line to /LocalSettings.php before the terminal '?>':
 .QP
 include\ \%'./extensions/wikitex/wikitex.php';
-.PP
-You may now continue with normal installation.
-.RE
-.NH 2
-Pre-packaged distribution
-.RS
-.nr i 0 1
 .IP \n+i.
 Render /extensions/wikitex/tmp scribable to the web server, but beware to disable scripting.
 .IP \n+i.
@@ -143,7 +144,7 @@ graph	Graphviz	Emden Gansner	research.att.com
 greek	Ibycus	Pierre MacKay	tug.org
 ling	AVM	Christopher Manning	stanford.edu
 	Parsetree	Eirik Hektoen	essex.ac.uk
-math*	AMS-LaTeX	Amer. Math. Soc.	ams.org
+amsmath	AMS-LaTeX	Amer. Math. Soc.	ams.org
 music	Lilypond	Han-Wen Nienhuys	lilypond.org
 plot	Gnuplot	Nikos Drakos	gnuplot.info
 svg	SVG lite	ImageMagick	imagemagick.org
@@ -152,9 +153,6 @@ tipa	TIPA	Rei Fukui	ctan.org
 xym	XyMTeX	Shinsaku Fujita	kit.ac.jp
 .TE
 .KE
-.FS *
-Nota bene: <amsmath> replaces <math> in stand-alone distributions to avoid conflicting with texvc, MediaWiki's built-in math renderer.
-.FE
 .RS
 .IP \n+i.
 Lastly, ensure that your server's $PATH variable includes /usr/bin and /usr/local/bin, or wherever your binaries are installed.
@@ -191,12 +189,24 @@ Add the following to apachectl or equivalent:
 .RE
 .RE
 .RE
-.NH
-Expanding WikiTeX
+.NH 1
+Hacking WikiTeX
+.RS
+.NH 2
+Getting Started
+.RS
+.PP
+Join the WikiTeX-l mailing list, where you can communicate with other users and developers:
+.QP
+http://lists.wikitex.org/wikitex-l
+.LP
+and familiarize yourself with Subversion (http://subversion.tigris.org), our collaborative development tool.
+.RE
+.NH 2
+Extending WikiTeX
 .RS
 .PP
 Adding novel packages to WikiTeX can be achieved in several discrete steps; after you have downloaded and installed the package:
-.RS
 .nr i 0 1
 .IP \n+i.
 Devise a class name for the package, and add a template to /extensions/wikitex in this form:
@@ -210,16 +220,24 @@ The template should expose said package to the renderer; see the current templat
 Unless the class requires non-standard processing (confer Lilypond's midi), skip to step three; else, add a new function in wikitex.sh under <class>.
 .IP
 Consult wikitex.sh for examples.
-.KS
 .IP \n+i.
 Lastly, if the package contains undesirable or insecure directives, add them to:
 .RS
 .QP
 \%objRend::strPost()::arrBlack[<class>]
-.RE
-.IP
+.LP
 in wikitex.php; the which see for details.
-.KE
 .RE
+.RE
+.RE
+.NH 1
+Getting Help
+.RS
+.PP
+A great way to meet users and developers is by joining WikiTeX-l (see 4.1 above); alternatively, visit:
+.QP
+http://archives.wikitex.org/wikitex-l
+.LP
+to browse the archives.
 .RE
 .bp
