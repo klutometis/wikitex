@@ -2,11 +2,10 @@
 # WikiTeX: expansible LaTeX module for MediaWiki
 # Copyright (C) 2004-5  Peter Danenberg
 # 
-#      WikiTeX is licensed under the Creative Commons Attribu-
-# tion  License.  To  view  a  copy  of  this  license,  visit
-# http://creativecommons.org/licenses/by/2.0/ or send a letter
-# to Creative Commons, 559 Nathan Abbott Way, Stanford,  Cali-
-# fornia 94305, USA.
+#      WikiTeX is licensed under  the  Open  Software  License
+# v. 2.1; to view a copy of this license, visit:
+#
+#      http://www.opensource.org/licenses/osl-2.1.php
 # 
 # wikitex.sh: shell interface to wikitex.php
 # Usage: FILE MODULE OUTPATH

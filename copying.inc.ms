@@ -3,4 +3,6 @@ WikiTeX: expansible LaTeX module for MediaWiki
 .br
 Copyright (C) 2004-5  Peter Danenberg
 .PP
-WikiTeX is licensed under the Creative Commons Attribution License. To view a copy of this license, visit http://creativecommons.org/licenses/by/2.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+WikiTeX is licensed under the Open Software License v.\ 2.1; to view a copy of this license, visit:
+.QP
+http://www.opensource.org/licenses/osl-2.1.php
