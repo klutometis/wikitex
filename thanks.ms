@@ -11,7 +11,7 @@ l r r.
 Brion Vibber	security	leuksman.com
 Erik Moeller	press	humanist.de/erik
 Phil Boswell	docs	User:Phil_Boswell
-Grendelkhan	packages	User:Grendlekhan
+Grendlekhan	packages	User:Grendlekhan
 Johannes Berg	security	sipsolutions.de
 Alexander Schremmer	security	alexanderweb.de
 Massoud Ghyam-khah	support	usc.edu
