@@ -1,0 +1,77 @@
+2005-01-29  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* wikitex.sh: added support for gnuplot and graphviz;
+	<plot> and <graph> respectively.  Added link to source
+	from each image.
+
+2005-01-28  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* wikitex.sh: Utterly refactored; new features: modular
+	handlers; multi-page output; plain-text, detailed errors;
+	file-based output cache.
+
+2005-01-25  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* wikitex.php (WikiTeX): \write, \let, \csname, \read,
+	and \open added to the blacklist; thanks to Johannes
+	Berg for the heads up.
+
+	* wikitex.sh (strInc): removed some lingering hard paths;
+	added support for dvipng; removed dvi2bitmap.
+
+	* wikitex.inc.php (WikiTeX): 'math' class changed to 'ams'
+	so as to avoid conflict with texvc; i.e. no chance of a
+	de-coupling of texvc and MediaWiki anytime soon.
+
+2004-10-04  Peter Danenberg  <pcdanenb at mitdasein dot com>
+
+	* manifest.ms: updated
+
+	* readme.ms: installation process for svg and batik
+
+	* wikitex.php: added 'batik' and 'svg' elements; fixed
+	invalid constructor in objRend which gave syntax errors
+	in PHP4.
+
+	* wikitex.sh: added 'batik' and 'svg' elements; changed
+	error template to wikitex.error.inc.tex; and: transitioned
+	to png from gif.
+
+	* wikitex.svg.inc.svg: added
+
+	* wikitex.batik.inc.svg: added
+
+	* wikitex.inc.sh: inc.sh reintroduced; batik path in-
+	erted; as well as indications for an Apache bandaid
+	should defective paths prevail.
+
+2004-10-03  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* wikitex.php: added support for SVG; deciding currently
+	on the Batikian solution (xml.apache.org/batik) since,
+	while slow, it is very complete.  For oeconomy's sake,
+	may switch later to ImageMagick's more limited, but faster,
+	SVG subset.
+
+2004-09-07  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* wikitex.inc.php: transferred parms from LocalSettings.php
+	hither; so as to produce a clean installation interface
+	(merely the addition of line for the stand-alone distributees).
+
+2004-09-06  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* README: clarified acquisition
+
+	* wikitex.php: added PHP4 constructor
+
+	* wikitex.php: updated parse code to phase3 standards;
+	WikiTeX now parses like pseudo-XML: <math></math>,
+	<chem></chem>, etc.
+
+	* wikitex.php: added new classes: go, xym, teng, and feyn.
+
+2004-09-05  Peter Danenberg  <danenberg at mitdasein dot com>
+
+	* README: added; with entry on extending WikiTeX.
+
