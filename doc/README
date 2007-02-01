@@ -1,0 +1,199 @@
+
+
+
+
+
+
+
+
+
+                  WikiTeX 2.0-beta README
+
+          Peter Danenberg <pcd at wikitex dot org>
+                   http://wikisophia.org
+
+
+
+                          ABSTRACT
+
+          Installation and configuration of the modTeX-
+     client for MediaWiki.
+
+
+
+31 January 2007
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+README                       -i-            WikiTeX 2.0-beta
+
+
+                     Table of Contents
+
+
+0.  Prerequisites  . . . . . . . . . . . . . . . . . . .   1
+1.  Installation . . . . . . . . . . . . . . . . . . . .   1
+2.  Copyright  . . . . . . . . . . . . . . . . . . . . .   1
+3.  Colophon . . . . . . . . . . . . . . . . . . . . . .   1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       31 January 2007
+
+
+
+
+
+
+README                       -1-            WikiTeX 2.0-beta
+
+
+
+
+
+                  WikiTeX 2.0-beta README
+
+          Peter Danenberg <pcd at wikitex dot org>
+                   http://wikisophia.org
+
+
+0.  Prerequisites
+
+     o    PHP 5.2+ compiled with curl and xmlrpc
+
+     o    MediaWiki 1.6+
+
+1.  Installation
+
+     1.   Copy ../wikitex to MEDIAWIKI/extensions.
+
+     2.   Copy config/default.php to config/local.php;  edit
+          local.php.
+
+     3.   Add the following line to LocalSettings.php:
+
+          include_once('./extensions/wikitex/main.php');
+
+2.  Copyright
+
+     WikiTeX: expansible modTeX client for MediaWiki
+     Copyright (C) 2004-7 Peter Danenberg
+
+          You should have received a copy of the GNU General
+     Public  License  Version  2 along with this program; if
+     not, write to the Free Software  Foundation,  Inc.,  51
+     Franklin  Street,  Fifth Floor, Boston, MA  02110-1301,
+     USA.
+
+3.  Colophon
+
+          This document was prepared in GNU troff using  the
+     ms macro package; preprocessed with tbl, the table for-
+     matter; and  lastly  filtered  through  col  to  remove
+     reverse line feeds and tabs:
+
+          groff -ms -t -Tascii SOURCE | col -bx > OUT
+
+     Automatically  generated  contents were moved from page
+     last to first with an ad-hoc bash-diddy.
+
+
+
+
+
+
+
+
+
+                       31 January 2007
+
+
