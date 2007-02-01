@@ -23,6 +23,11 @@ Installation and configuration of the modTeX-client for MediaWiki.
 PHP 5.2+ compiled with curl and xmlrpc
 .IP \(bu
 MediaWiki 1.6+
+.IP \(bu
+mod_tex 0.1\**
+.FS
+http://modtex.org
+.FE
 .XH 1 Installation
 .nr i 0 1
 .IP \n+i.
