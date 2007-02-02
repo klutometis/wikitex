@@ -110,6 +110,9 @@ class Wikitex {
   public static function math($content, array $parms) {
     return self::latex($content, $parms, __FUNCTION__);
   }
-}
 
+  public static function chess($content, array $parms) {
+    return self::latex($content, $parms, __FUNCTION__);
+  }
+}
 ?>

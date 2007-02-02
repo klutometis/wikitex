@@ -74,13 +74,14 @@ class WikitexConstants
   public static $HOOKS =
     array(
           'amsmath' => 'math',
-          'dot' => 'dot',
+          'chess' => 'chess',
           'circo' => 'circo',
-          'neato' => 'neato',
-          'twopi' => 'twopi',
+          'dot' => 'dot',
           'fdp' => 'fdp',
           'music' => 'music',
+          'neato' => 'neato',
           'plot' => 'plot',
+          'twopi' => 'twopi',
           );
 
   public static $CLASSES =
