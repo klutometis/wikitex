@@ -9,7 +9,7 @@ GRFLAGS=-ms -Tascii
 COL=col
 COFLAGS=-xb
 REORDER=./reorder.sh
-DOCS=README
+DOCS=README TODO
 ALL=COPYING ${DOCS}
 
 .SUFFIXES: .ms
