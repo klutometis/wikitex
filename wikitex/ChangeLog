@@ -1,3 +1,9 @@
+2007-02-01  Peter Danenberg  <pcd at wikitex dot org>
+
+	* Wikitex.php: Added a chess sub-latex-action.
+
+	* WikitexConstants.php: Added a hook for chess.
+
 2007-01-31  Peter Danenberg  <pcd at wikitex dot org>
 
 	* Wikitex.php: Added support for gnuplot.
