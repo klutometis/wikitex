@@ -1,5 +1,5 @@
 .ig
-WikiTeX: expansible modTeX client for MediaWiki
+WikiTeX: expansible mod_tex client for MediaWiki
 Copyright(C) 2004-7 Peter Danenberg
 See doc/COPYING for details.
 ..
@@ -16,7 +16,7 @@ Peter Danenberg <pcd at wikitex dot org>
 .AI
 http://wikisophia.org
 .AB
-Installation and configuration of the modTeX-client for MediaWiki.
+Installation and configuration of the mod_tex client for MediaWiki.
 .AE
 .XH 1 Prerequisites S 0
 .IP \(bu

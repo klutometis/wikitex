@@ -16,7 +16,7 @@
 
                           ABSTRACT
 
-          Installation and configuration of the modTeX-
+          Installation and configuration of the mod_tex
      client for MediaWiki.
 
 
@@ -167,7 +167,7 @@ README                       -1-            WikiTeX 2.0-beta
 
 2.  Copyright
 
-     WikiTeX: expansible modTeX client for MediaWiki
+     WikiTeX: expansible mod_tex client for MediaWiki
      Copyright (C) 2004-7 Peter Danenberg
 
           You should have received a copy of the GNU General
