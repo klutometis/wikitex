@@ -163,7 +163,7 @@ README                       -1-            WikiTeX 2.0-beta
 
      3.   Add the following line to LocalSettings.php:
 
-          include_once("$IP/extensions/wikitex/main.php");
+          require_once("$IP/extensions/wikitex/main.php");
 
 2.  Copyright
 
