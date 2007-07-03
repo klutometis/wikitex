@@ -21,7 +21,7 @@
 
 
 
-1 February 2007
+3 July 2007
 
 
 
@@ -127,7 +127,7 @@ README                       -i-            WikiTeX 2.0-beta
 
 
 
-                       1 February 2007
+                         3 July 2007
 
 
 
@@ -163,7 +163,7 @@ README                       -1-            WikiTeX 2.0-beta
 
      3.   Add the following line to LocalSettings.php:
 
-          include_once('./extensions/wikitex/main.php');
+          include_once("$IP/extensions/wikitex/main.php");
 
 2.  Copyright
 
@@ -194,6 +194,6 @@ README                       -1-            WikiTeX 2.0-beta
 
 
 
-                       1 February 2007
+                         3 July 2007
 
 

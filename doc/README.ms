@@ -37,5 +37,5 @@ Copy config/default.php to config/local.php; edit local.php.
 .IP \n+i.
 Add the following line to LocalSettings.php:
 .QP
-\%include_once('./extensions/wikitex/main.php');
+\%include_once("$IP/extensions/wikitex/main.php");
 .so footer.ms
