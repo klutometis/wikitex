@@ -20,7 +20,7 @@
 
 
 
-1 February 2007
+4 February 2007
 
 
 
@@ -127,7 +127,7 @@ TODO                         -i-            WikiTeX 2.0-beta
 
 
 
-                       1 February 2007
+                       4 February 2007
 
 
 
@@ -148,8 +148,11 @@ TODO                         -1-            WikiTeX 2.0-beta
 
 1.  Exigenda
 
+     i18n Even  the  tag->action  mapping should be interna-
+          tionalized.
+
      Tags Allow  specification  of  alternate  (on-the-fly?)
-          tags; <img src="IMAGE/PNG" />, etc.   Substitution
+          tags;  <img src="IMAGE/PNG" />, etc.  Substitution
           according to mime.
 
 2.  Exacta
@@ -160,21 +163,21 @@ TODO                         -1-            WikiTeX 2.0-beta
      Copyright (C) 2004-7 Peter Danenberg
 
           You should have received a copy of the GNU General
-     Public License Version 2 along with  this  program;  if
-     not,  write  to  the Free Software Foundation, Inc., 51
-     Franklin Street, Fifth Floor, Boston,  MA   02110-1301,
+     Public  License  Version  2 along with this program; if
+     not, write to the Free Software  Foundation,  Inc.,  51
+     Franklin  Street,  Fifth Floor, Boston, MA  02110-1301,
      USA.
 
 4.  Colophon
 
-          This  document was prepared in GNU troff using the
+          This document was prepared in GNU troff using  the
      ms macro package; preprocessed with tbl, the table for-
-     matter;  and  lastly  filtered  through  col  to remove
+     matter; and  lastly  filtered  through  col  to  remove
      reverse line feeds and tabs:
 
           groff -ms -t -Tascii SOURCE | col -bx > OUT
 
-     Automatically generated contents were moved  from  page
+     Automatically  generated  contents were moved from page
      last to first with an ad-hoc bash-diddy.
 
 
@@ -191,9 +194,6 @@ TODO                         -1-            WikiTeX 2.0-beta
 
 
 
-
-
-
-                       1 February 2007
+                       4 February 2007
 
 

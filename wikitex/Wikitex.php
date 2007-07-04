@@ -114,5 +114,13 @@ class Wikitex {
   public static function chess($content, array $parms) {
     return self::latex($content, $parms, __FUNCTION__);
   }
+
+  public static function feyn($content, array $parms) {
+    return self::latex($content, $parms, __FUNCTION__);
+  }
+
+  public static function xymtex($content, array $parms) {
+    return self::latex($content, $parms, __FUNCTION__);
+  }
 }
 ?>

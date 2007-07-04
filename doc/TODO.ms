@@ -19,6 +19,8 @@ http://wikisophia.org
 Exigenda and exacta contained herein.
 .AE
 .XH 1 Exigenda
+.IP i18n
+Even the tag->action mapping should be internationalized.
 .IP Tags
 Allow specification of alternate (on-the-fly?) tags;
 <img src="IMAGE/PNG" />, etc.  Substitution according
