@@ -36,6 +36,7 @@ class WikitexConstants
           'text/x-graphviz' => 'dot',
           'text/x-latex' => 'tex',
           'text/x-lilypond' => 'ly',
+          'text/x-go-sgf' => 'sgf',
           'text/x-wikitex-error' => 'error',
           );
 
@@ -50,6 +51,7 @@ class WikitexConstants
           'latex' => 'text/x-latex',
           'midi' => 'audio/midi',
           'music' => 'text/x-lilypond',
+          'go' => 'text/x-go-sgf',
           'png' => 'image/png',
           );
 
@@ -88,6 +90,7 @@ class WikitexConstants
           'neato' => 'neato',
           'plot' => 'plot',
           'twopi' => 'twopi',
+          'go' => 'go',
           );
 
   public static $CLASSES =
