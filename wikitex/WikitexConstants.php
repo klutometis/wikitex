@@ -91,6 +91,7 @@ class WikitexConstants
           'plot' => 'plot',
           'twopi' => 'twopi',
           'go' => 'go',
+          'teng' => 'teng',
           );
 
   public static $CLASSES =
