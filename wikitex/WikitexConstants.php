@@ -79,6 +79,7 @@ class WikitexConstants
           'chem' => 'xymtex',
           'dot' => 'dot',
           'fdp' => 'fdp',
+          'graph' => 'dot',
           'feyn' => 'feyn',
           'music' => 'music',
           'neato' => 'neato',
