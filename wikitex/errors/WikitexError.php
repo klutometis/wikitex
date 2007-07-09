@@ -22,7 +22,10 @@ class WikitexError extends Exception
     list($strerror, $errno) = WikitexConstants::$ERRORS['generic'];
     $message = $this->message;
     if ($this->code) {
-      $message = sprintf(self::MESSAGE, $this->code, $message);
+      $message = sprintf(self::MESSAGE, $this->code,
+                         WikitexConfig::$DEBUG
+                         ? stripslashes(str_replace('\n', "\n", $message))
+                         : '[Supressed]');
     }
     return sprintf($strerror, $message);
   }

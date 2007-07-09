@@ -20,7 +20,8 @@ class WikitexRPCFaultError extends WikitexError
     list($strerror, $errno) = WikitexConstants::$ERRORS['fault'];
     $fault_strerror = htmlentities($document[self::STRING]);
     $fault_errno = $document[self::CODE];
-    parent::__construct(sprintf($strerror, $fault_errno, $fault_strerror), $errno);
+//     parent::__construct(sprintf($strerror, $fault_errno, $fault_strerror), $errno);
+    parent::__construct(sprintf($strerror, $fault_strerror), $errno);
   }
 }
 

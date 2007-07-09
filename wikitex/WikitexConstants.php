@@ -55,14 +55,17 @@ class WikitexConstants
 
   public static $ERRORS =
     array(
-          'generic' => array('<span class="error">WikiTeX hath failed, milord: %s. (<em>Pecca fortiter!</em>)</span>',
+//           'generic' => array('<span class="error">WikiTeX hath failed, milord: %s. (<em>Pecca fortiter!</em>)</span>',
+//                              0),
+          'generic' => array('<span class="error">WikiTeX failure:</span> <pre>%s</pre>',
                              0),
           'blank' => array('We received a blank document from the webserver',
                            1),
           'curl' => array('Curl reported error %d: %s', 2),
           'directory' => array('Can\'t create directory `%s\'', 3),
           'file' => array('Can\'t write to file `%s\'', 4),
-          'fault' => array('The RPC-server reported fault %d: &ldquo;%s&rdquo;', 4),
+//           'fault' => array('The RPC-server reported fault %d: &ldquo;%s&rdquo;', 5),
+          'fault' => array('%s', 5),
           );
 
   public static $AGENT = 'WikiTeX-WikiMedia';
