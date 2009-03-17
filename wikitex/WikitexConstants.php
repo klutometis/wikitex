@@ -92,6 +92,7 @@ class WikitexConstants
           'twopi' => 'twopi',
           'go' => 'go',
           'teng' => 'teng',
+          'greek' => 'greek',
           );
 
   public static $CLASSES =

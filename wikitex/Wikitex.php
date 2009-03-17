@@ -127,6 +127,10 @@ class Wikitex {
     return self::latex($content, $parms, __FUNCTION__);
   }
 
+  public static function greek($content, array $parms) {
+    return self::latex($content, $parms, __FUNCTION__);
+  }
+
   public static function go($content, array $parms) {
     return self::image($content, $parms, __FUNCTION__, WikitexConstants::$MIMES['go']);
   }
