@@ -79,6 +79,7 @@ class WikitexConstants
   public static $HOOKS =
     array(
           'amsmath' => 'math',
+	  'blockmath' => 'blockmath',
           'chess' => 'chess',
           'circo' => 'circo',
           'chem' => 'xymtex',
