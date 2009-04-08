@@ -20,7 +20,7 @@
 
 
 
-4 February 2007
+8 April 2009
 
 
 
@@ -127,7 +127,7 @@ TODO                         -i-            WikiTeX 2.0-beta
 
 
 
-                       4 February 2007
+                        8 April 2009
 
 
 
@@ -154,6 +154,11 @@ TODO                         -1-            WikiTeX 2.0-beta
      Tags Allow  specification  of  alternate  (on-the-fly?)
           tags;  <img src="IMAGE/PNG" />, etc.  Substitution
           according to mime.
+
+     XML-RPC
+          Either replace the builtin-XML-RPC/curl  implemen-
+          tation  with a php one, or allow some sort of cus-
+          tomization flag. Care to benchmark?
 
 2.  Exacta
 
@@ -189,11 +194,6 @@ TODO                         -1-            WikiTeX 2.0-beta
 
 
 
-
-
-
-
-
-                       4 February 2007
+                        8 April 2009
 
 

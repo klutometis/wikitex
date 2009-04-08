@@ -25,5 +25,8 @@ Even the tag->action mapping should be internationalized.
 Allow specification of alternate (on-the-fly?) tags;
 <img src="IMAGE/PNG" />, etc.  Substitution according
 to mime.
+.IP XML-RPC
+Either replace the builtin-XML-RPC/curl implementation with a php one,
+or allow some sort of customization flag. Care to benchmark?
 .XH 1 Exacta
 .so footer.ms
