@@ -1,0 +1,13 @@
+Index: includes/parser/Parser.php
+===================================================================
+--- includes/parser/Parser.php	(revision 49146)
++++ includes/parser/Parser.php	(working copy)
+@@ -3224,7 +3224,7 @@
+ 					$content = strtr($content, array('-{' => '-&#123;', '}-' => '&#125;-'));
+ 					$output = Xml::escapeTagsOnly( $content );
+ 					break;
+-				case 'math':
++				case 'oldmath':
+ 					$output = $wgContLang->armourMath(
+ 						MathRenderer::renderMath( $content, $attributes ) );
+ 					break;

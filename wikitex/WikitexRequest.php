@@ -5,6 +5,23 @@
    * See doc/COPYING for details.
    */
 
+$wikitexCurl = false;
+$wikitexXMLRPCPHP = false;
+$wikitexXMLRPCBuiltin = false;
+
+$wikitexXMLRPCPHP = ((@include('xmlrpc.inc')) !== false);
+
+if (function_exists('xmlrpc_encode_request'))
+  $wikitexXMLRPCBuiltin = true;
+
+if (function_exists('curl_init'))
+  $wikitexCurl = true;
+
+if (!($wikitexXMLRPCPHP || ($wikitexXMLRPCBuiltin && $wikitexCurl)))
+  throw new Exception('Need either PHPXMLRPC (<http://phpxmlrpc.' .
+                      'sourceforge.net/>) library or the builtin ' .
+                      'XML_RPC + curl extension.');
+
 class WikitexRequest
 {
   protected $action = NULL;
@@ -21,7 +38,7 @@ class WikitexRequest
   }
 
   /**
-   * An ad-hoc call to check errore caching.  Can be generalized
+   * An ad-hoc call to check error caching.  Can be generalized
    * by adding error to the list of interesting MIMEs, and giving
    * it precedence, perhaps, over content-MIMEs?
    *
@@ -93,6 +110,8 @@ class WikitexRequest
    * @return A dictionary of MIME -> content mappings.
    */
   public function render(array $mimes, $atomic=TRUE) {
+    global $wikitexXMLRPCPHP, $wikitexXMLRPCBuiltin;
+
     $cache = new WikitexCache($this->content);
     if ($cached = $this->checkCachedError($cache)) {
       return $cached;
@@ -108,7 +127,46 @@ class WikitexRequest
     }
     if ($media) {
       return $media;
+    // } elseif ($wikitexXMLRPCBuiltin) {
+    } elseif (false) {
+      return $this->render_with_xmlrpc_builtin($mimes, $cache);
+    } else {
+      return $this->render_with_xmlrpc_php($mimes, $cache);
     }
+  }
+
+  public function render_with_xmlrpc_php(array $mimes, $cache) {
+    $url = parse_url(WikitexConfig::$URL);
+    $port = (isset($url['port']))
+      ? ":{$url['port']}"
+      : NULL;
+    $host = "{$url['host']}{$port}";
+    $username = WikitexConfig::$USERNAME;
+    $password = WikitexConfig::$PASSWORD;
+    $path = $url['path'];
+    $client = new xmlrpc_client("http://$username:$password@$host$path");
+    $msg = new xmlrpcmsg($this->action,
+                         array(new xmlrpcval(array('content' =>
+                                                   new xmlrpcval($this->content, 'base64'),
+                                                   'author' =>
+                                                   new xmlrpcval($this->author, 'base64')),
+                                             'struct')));
+    $response = $client->send($msg);
+    if ($response->faultCode()) {
+      $cacheable = new WikitexError($response->faultString(),
+                                    $response->faultCode());
+      $cache->putCache($cacheable, WikitexConstants::$MIMES['error']);
+      throw $cacheable;
+    }
+    $document = php_xmlrpc_decode($response->value());
+    foreach ($document as $mime => $content) {
+      $cache->putCache($content, $mime);
+      $media[$mime] = $cache->getCache($mime);
+    }
+    return $media;
+  }
+
+  public function render_with_xmlrpc_builtin(array $mimes, $cache) {
     $request = $this->getCurlRequest();
     $response = curl_exec($request);
     $errno = curl_errno($request);

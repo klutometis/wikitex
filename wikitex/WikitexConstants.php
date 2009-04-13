@@ -66,8 +66,7 @@ class WikitexConstants
           'curl' => array('Curl reported error %d: %s', 2),
           'directory' => array('Can\'t create directory `%s\'', 3),
           'file' => array('Can\'t write to file `%s\'', 4),
-//           'fault' => array('The RPC-server reported fault %d: &ldquo;%s&rdquo;', 5),
-          'fault' => array('%s', 5),
+          'fault' => array('The RPC-server reported fault %d: &ldquo;%s&rdquo;', 5),
           );
 
   public static $AGENT = 'WikiTeX-WikiMedia';
@@ -78,6 +77,7 @@ class WikitexConstants
    */
   public static $HOOKS =
     array(
+          'math' => 'math',
           'amsmath' => 'math',
 	  'blockmath' => 'blockmath',
           'chess' => 'chess',
