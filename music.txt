@@ -1,0 +1,17 @@
+\header {
+    tagline = ""
+}
+\score {
+
+	\notes \relative c' { 
+		e16-.->a(b gis)a-.->c(d b)c-.->e(f dis)e-.->a(b a)
+		gis(b e)e,(gis b)b,(e gis)gis,(b e)e,(gis? b e)
+	} 
+
+    \paper  {
+        pagenumber = no
+    }
+    \midi {
+        \tempo 4 . = 80
+    }
+}
